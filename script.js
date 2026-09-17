@@ -1,7 +1,6 @@
 // ---------------------------------------------------------------------------
 // Claire Jiang — Portfolio interactions
-// Nav scroll state + mobile toggle, scroll-spy, reveal-on-scroll,
-// art gallery filtering + lightbox, back-to-top.
+// Nav scroll state + mobile toggle, scroll-spy, reveal-on-scroll, back-to-top.
 // ---------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,8 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
   initScrollSpy();
   initReveal();
-  initArtFilters();
-  initLightbox();
   initBackToTop();
   initStatCounters();
 });
@@ -85,88 +82,6 @@ function initReveal() {
   els.forEach((el, i) => {
     el.style.transitionDelay = `${Math.min(i % 6, 5) * 60}ms`;
     observer.observe(el);
-  });
-}
-
-function initArtFilters() {
-  const buttons = document.querySelectorAll(".filter-btn");
-  const tiles = document.querySelectorAll(".art-tile");
-  if (!buttons.length || !tiles.length) return;
-
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const category = btn.dataset.filter;
-
-      tiles.forEach((tile) => {
-        const match = category === "all" || tile.dataset.category === category;
-        tile.classList.toggle("is-hidden", !match);
-      });
-    });
-  });
-}
-
-function initLightbox() {
-  const tiles = Array.from(document.querySelectorAll(".art-tile[data-lightbox]"));
-  const lightbox = document.querySelector(".lightbox");
-  if (!tiles.length || !lightbox) return;
-
-  const img = lightbox.querySelector("img");
-  const caption = lightbox.querySelector(".lightbox-caption");
-  const closeBtn = lightbox.querySelector(".lightbox-close");
-  const prevBtn = lightbox.querySelector(".lightbox-nav.prev");
-  const nextBtn = lightbox.querySelector(".lightbox-nav.next");
-
-  let currentIndex = 0;
-
-  const visibleTiles = () => tiles.filter((t) => !t.classList.contains("is-hidden"));
-
-  const open = (index) => {
-    const list = visibleTiles();
-    if (!list.length) return;
-    currentIndex = index;
-    const tile = list[currentIndex];
-    const fullSrc = tile.dataset.full || tile.querySelector("img").src;
-    img.src = fullSrc;
-    img.alt = tile.querySelector("img").alt || "";
-    caption.textContent = tile.dataset.caption || tile.querySelector("img").alt || "";
-    lightbox.classList.add("is-open");
-    document.body.style.overflow = "hidden";
-  };
-
-  const close = () => {
-    lightbox.classList.remove("is-open");
-    document.body.style.overflow = "";
-  };
-
-  const step = (dir) => {
-    const list = visibleTiles();
-    if (!list.length) return;
-    currentIndex = (currentIndex + dir + list.length) % list.length;
-    open(currentIndex);
-  };
-
-  tiles.forEach((tile) => {
-    tile.addEventListener("click", () => {
-      const list = visibleTiles();
-      open(list.indexOf(tile));
-    });
-  });
-
-  closeBtn?.addEventListener("click", close);
-  prevBtn?.addEventListener("click", () => step(-1));
-  nextBtn?.addEventListener("click", () => step(1));
-
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) close();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (!lightbox.classList.contains("is-open")) return;
-    if (e.key === "Escape") close();
-    if (e.key === "ArrowRight") step(1);
-    if (e.key === "ArrowLeft") step(-1);
   });
 }
 

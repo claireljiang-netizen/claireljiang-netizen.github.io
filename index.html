@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Claire Jiang | Product &amp; Design Portfolio</title>
-<meta name="description" content="Claire Jiang — product management case studies and original artwork." />
+<meta name="description" content="Claire Jiang — product management case studies and portfolio." />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22Georgia,serif%22>C</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,6 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#case-studies">Case Studies</a></li>
-        <li><a href="#art">Art</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -44,7 +43,7 @@
         </p>
         <div class="btn-row reveal">
           <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
-          <a href="#art" class="btn btn-ghost">See My Art</a>
+          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
         </div>
         <div class="scroll-cue reveal">
           <span class="line"></span>
@@ -97,7 +96,7 @@
           </p>
           <p>
             Outside of casework, I'm usually on a tennis court, on a long walk somewhere, or
-            drawing &mdash; a few pieces are in the <a href="#art"><strong>Art</strong></a> section below.
+            drawing.
           </p>
 
           <div class="stat-row">
@@ -231,59 +230,6 @@
     </div>
   </section>
 
-  <!-- ================= ART ================= -->
-  <section id="art">
-    <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">Beyond Product</p>
-          <h2>Art</h2>
-        </div>
-        <p class="section-note">A sketchbook of what I make when I'm not thinking about roadmaps. Click any piece to view it larger.</p>
-      </div>
-
-      <div class="art-filters reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="sketch">Sketches</button>
-        <button class="filter-btn" data-filter="painting">Paintings</button>
-        <button class="filter-btn" data-filter="digital">Digital</button>
-      </div>
-
-      <div class="art-masonry reveal">
-        <figure class="art-tile placeholder" data-category="sketch" data-lightbox data-caption="Untitled sketch">
-          <img src="assets/art/placeholder-1.svg" alt="Placeholder — add a sketch here" loading="lazy">
-          <figcaption><span>Untitled sketch</span><span class="cat">Sketch</span></figcaption>
-        </figure>
-        <figure class="art-tile placeholder" data-category="painting" data-lightbox data-caption="Untitled painting">
-          <img src="assets/art/placeholder-2.svg" alt="Placeholder — add a painting here" loading="lazy">
-          <figcaption><span>Untitled painting</span><span class="cat">Painting</span></figcaption>
-        </figure>
-        <figure class="art-tile placeholder" data-category="digital" data-lightbox data-caption="Untitled digital piece">
-          <img src="assets/art/placeholder-3.svg" alt="Placeholder — add a digital piece here" loading="lazy">
-          <figcaption><span>Untitled digital</span><span class="cat">Digital</span></figcaption>
-        </figure>
-        <figure class="art-tile placeholder" data-category="sketch" data-lightbox data-caption="Untitled sketch">
-          <img src="assets/art/placeholder-4.svg" alt="Placeholder — add a sketch here" loading="lazy">
-          <figcaption><span>Untitled sketch</span><span class="cat">Sketch</span></figcaption>
-        </figure>
-        <figure class="art-tile placeholder" data-category="painting" data-lightbox data-caption="Untitled painting">
-          <img src="assets/art/placeholder-5.svg" alt="Placeholder — add a painting here" loading="lazy">
-          <figcaption><span>Untitled painting</span><span class="cat">Painting</span></figcaption>
-        </figure>
-        <figure class="art-tile placeholder" data-category="digital" data-lightbox data-caption="Untitled digital piece">
-          <img src="assets/art/placeholder-6.svg" alt="Placeholder — add a digital piece here" loading="lazy">
-          <figcaption><span>Untitled digital</span><span class="cat">Digital</span></figcaption>
-        </figure>
-      </div>
-
-      <p class="art-note reveal">
-        These are placeholder tiles. Drop your own images into <code>assets/art/</code>, then swap the
-        <code>&lt;img&gt;</code> src and <code>data-category</code> (sketch / painting / digital) for each
-        <code>&lt;figure class="art-tile"&gt;</code> in <code>index.html</code>. Full details in the README.
-      </p>
-    </div>
-  </section>
-
   <!-- ================= CONTACT ================= -->
   <section id="contact">
     <div class="container contact-wrap">
@@ -307,14 +253,6 @@
 </footer>
 
 <button class="to-top" aria-label="Back to top">&uarr;</button>
-
-<div class="lightbox">
-  <button class="lightbox-close" aria-label="Close">&times;</button>
-  <button class="lightbox-nav prev" aria-label="Previous">&larr;</button>
-  <img src="" alt="">
-  <button class="lightbox-nav next" aria-label="Next">&rarr;</button>
-  <div class="lightbox-caption"></div>
-</div>
 
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 <script src="script.js"></script>
