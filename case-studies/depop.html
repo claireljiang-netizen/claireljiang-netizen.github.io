@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Depop — Claire Jiang</title>
+<meta name="description" content="Case study: improving convenience and reliability in Depop's buyer experience." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a class="brand" href="../index.html#top">Claire Jiang<span>.</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#case-studies">Case Studies</a></li>
+        <li><a href="../index.html#art">Art</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="cs-hero">
+    <div class="container">
+      <a class="cs-back" href="../index.html#case-studies">&larr; Back to Case Studies</a>
+      <p class="eyebrow">Product Strategy</p>
+      <h1>Depop: Improving Convenience &amp; Reliability in the Buyer Experience</h1>
+      <p class="subtitle">
+        Goal: determine a product strategy to ensure convenience and reliability in Depop's
+        buyer experience &mdash; from search and discovery through checkout.
+      </p>
+      <div class="cs-meta">
+        <div>
+          <h4>Company</h4>
+          <p>Depop &mdash; peer-to-peer resale marketplace</p>
+        </div>
+        <div>
+          <h4>Users</h4>
+          <p>~30M platform users</p>
+        </div>
+        <div>
+          <h4>Method</h4>
+          <p>User interviews + competitive analysis</p>
+        </div>
+        <div>
+          <h4>Benchmarked</h4>
+          <p>Grailed, eBay, Poshmark, Pinterest</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="container">
+      <h2>Background</h2>
+      <p class="lede">
+        Depop is a resale-and-social e-commerce platform where sellers and buyers can DM one
+        another, like items, and follow one another. It's rooted in vintage and secondhand
+        fashion, and hosts around 30 million users who primarily buy and sell clothing,
+        accessories, and a smaller selection of art, homeware, and records.
+      </p>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="container">
+      <h2>Executive Summary</h2>
+      <div class="cs-grid-2">
+        <div class="cs-card">
+          <h3>Pain Point 1: Discovery</h3>
+          <p>
+            Users struggle to find items when they don't know the exact name or brand of a
+            piece, or when they want to shop an entire aesthetic rather than a specific keyword.
+          </p>
+          <p><strong>Solution:</strong> reverse image search, plus recommendations curated from Pinterest-board-style inputs.</p>
+          <p><strong>Impact:</strong> &uarr; discovery &rarr; &uarr; listing views &rarr; &uarr; purchases.</p>
+        </div>
+        <div class="cs-card">
+          <h3>Pain Point 2: Pricing Autonomy</h3>
+          <p>
+            Buyers are less inclined to purchase because they have no autonomy over pricing,
+            especially when trying to buy multiple items at once.
+          </p>
+          <p><strong>Solution:</strong> let buyers make a single offer across 2+ items automatically (bundle offers).</p>
+          <p><strong>Impact:</strong> &uarr; buyer initiative &rarr; &darr; abandoned carts &rarr; &uarr; purchases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="container">
+      <h2>User Research</h2>
+      <p class="lede" style="margin-bottom: 24px;">Interviews surfaced four recurring experience pitfalls, weighted here by how often they came up.</p>
+      <div class="cs-grid-3">
+        <div class="cs-stat">
+          <span class="num"><span data-count-to="64" data-suffix="%">0</span></span>
+          <span class="label">said search lacks depth &mdash; hard to discover new items</span>
+        </div>
+        <div class="cs-stat">
+          <span class="num"><span data-count-to="25" data-suffix="%">0</span></span>
+          <span class="label">found bundling tedious without a way to make offers</span>
+        </div>
+        <div class="cs-stat">
+          <span class="num"><span data-count-to="7" data-suffix="%">0</span></span>
+          <span class="label">cited inaccurate/absent listing details from lax seller requirements</span>
+        </div>
+      </div>
+
+      <div class="cs-card" style="margin-top:24px;">
+        <h3>Persona: Tim, the intentional secondhand shopper</h3>
+        <p>
+          Tim wants to buy a winter coat &mdash; black, warm, and trendy &mdash; but isn't sure of
+          the exact model or design. He starts with a broad search ("black winter jacket") and
+          refines it by scrolling and spotting details like "lobster clasps." Without image search
+          or brand verification, it's difficult for him to sift quality listings from mediocre
+          ones, and often no sale goes through at all.
+        </p>
+      </div>
+
+      <div class="cs-card" style="margin-top:16px;">
+        <h3>What competitors do well</h3>
+        <p>
+          <strong>Grailed</strong> offers "Grailed Verified" tags for reviewed items.
+          <strong>eBay</strong> lets buyers filter for past sales to understand going prices.
+          <strong>Poshmark</strong> has strong native bundle-offer features.
+          <strong>Pinterest</strong>, while not a direct competitor, has a reverse-search
+          experience that outperforms Depop's keyword-only search.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="container">
+      <h2>Feature Prioritization</h2>
+      <table class="cs-table">
+        <thead>
+          <tr><th>Pain Point</th><th>Feature</th><th>Priority</th><th>Reasoning</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Can't find items without the right keywords</td>
+            <td>Reverse image search + Pinterest integration</td>
+            <td><span class="priority-tag p0">High</span></td>
+            <td>Improves discoverability and search satisfaction; medium/high engineering effort, but highest impact on engagement.</td>
+          </tr>
+          <tr>
+            <td>Uncertainty in sizing &amp; authenticity</td>
+            <td>Required measurements, tag scan, verification filter</td>
+            <td><span class="priority-tag p1">Med/High</span></td>
+            <td>Builds trust and reduces returns; high effort for backend verification, but trust outweighs the listing delay.</td>
+          </tr>
+          <tr>
+            <td>Can't negotiate prices on bundles</td>
+            <td>"Make Offer" on bundle deals</td>
+            <td><span class="priority-tag p1">Med/High</span></td>
+            <td>Drives multi-item purchases and higher cart value with moderate UI/backend effort.</td>
+          </tr>
+          <tr>
+            <td>Limited filtering options</td>
+            <td>Additional filters</td>
+            <td><span class="priority-tag p2">Low</span></td>
+            <td>Improves efficiency but deprioritized in favor of trust and discovery fixes.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="container">
+      <h2>Implementation Timeline</h2>
+      <div class="timeline">
+        <div class="tl-step">
+          <h4>Q1 &middot; Jan&ndash;Mar</h4>
+          <p>User research &amp; interviews; begin reverse image search + Pinterest integration build.</p>
+        </div>
+        <div class="tl-step">
+          <h4>Q2 &middot; Apr&ndash;Jun</h4>
+          <p>Build UI/UX for bundle deals; continue core feature development.</p>
+        </div>
+        <div class="tl-step">
+          <h4>Q3 &middot; Jul&ndash;Sep</h4>
+          <p>Testing &amp; feedback across both features; collect usage data.</p>
+        </div>
+        <div class="tl-step">
+          <h4>Q4 &middot; Oct&ndash;Dec</h4>
+          <p>Refine UI, add features based on feedback, track year-end KPIs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="container">
+      <h2>Target KPIs</h2>
+      <div class="cs-grid-2">
+        <div class="cs-card">
+          <h3>Product Discovery</h3>
+          <p>30% of users adopting reverse image search &middot; 10% increase in search-to-transaction conversion &middot; 20% reduction in no-result searches.</p>
+        </div>
+        <div class="cs-card">
+          <h3>Purchase Behavior</h3>
+          <p>10% increase in average order value &middot; 30% bundle-offer acceptance rate &middot; 40% increase in multi-item purchases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="container">
+      <div class="cs-download">
+        <p>Want to see the full research deck, before/after mockups, and competitive teardown?</p>
+        <a class="btn btn-primary btn-sm" href="../assets/case-studies/depop-deck.pdf" target="_blank" rel="noopener">Download Full Deck (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cs-nextprev">
+      <a href="uber-eats.html">&larr; Uber Eats Ads</a>
+      <a href="framer.html">Framer &rarr;</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">&copy; <span id="year"></span> Claire Jiang. Built with care.</div>
+</footer>
+
+<button class="to-top" aria-label="Back to top">&uarr;</button>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="../script.js"></script>
+</body>
+</html>
